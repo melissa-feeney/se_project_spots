@@ -18,8 +18,6 @@ This project is the first stage in creating an interactive social media web appl
 
 **Images**
 
-The way you'll do this at work is by exporting images directly from Figma — we recommend doing that to practice more. Don't forget to optimize them [here](https://tinypng.com/), so your project loads faster.
-
 [Images used for Cards](images/Cards.svg)
 
 **GitHub**
@@ -28,4 +26,5 @@ The way you'll do this at work is by exporting images directly from Figma — we
 
 **More Information**
 
-[Link to a video describing the project] (https://drive.google.com/file/d/17qAeCMR2kARRq1ZOPDjEwAbaoj1Mu22v/view?usp=sharing)
+[Link to a video describing the project](https://drive.google.com/file/d/17qAeCMR2kARRq1ZOPDjEwAbaoj1Mu22v/view?usp=sharing)
+[zip version](https://drive.google.com/file/d/1eRCg1LicddRiyghopNp1fAthrtbSc7MK/view?usp=drive_link)
