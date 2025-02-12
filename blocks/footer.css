@@ -1,0 +1,11 @@
+.footer {
+  display: flex;
+  justify-content: center;
+  height: 136px;
+}
+
+.footer__content {
+  height: 16px;
+  width: 104px;
+  margin-top: 60px;
+}
