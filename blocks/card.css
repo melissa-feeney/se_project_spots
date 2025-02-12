@@ -30,7 +30,7 @@
 }
 
 .card__like-button {
-  background-image: url(../images/like-icon-default.png);
+  background-image: url(../images/heart-default.svg);
   background-image: no-repeat;
   background-position: center;
   width: 23px;
@@ -41,7 +41,7 @@
 }
 
 .card__like-button:hover {
-  background-image: url(../images/Union.svg);
+  background-image: url(../images/heart-hover.svg);
 }
 
 @media screen and (max-width: 627px) {
