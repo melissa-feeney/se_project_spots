@@ -18,7 +18,7 @@ This project is the first stage in creating an interactive social media web appl
 
 **Images**
 
-[Images used for Cards](images/Cards.svg)
+Will add photos to describe the project's features.
 
 **GitHub**
 
