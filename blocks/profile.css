@@ -69,6 +69,10 @@
   padding-right: 8px;
 }
 
+.profile__edit-button:hover {
+  color: #212121;
+}
+
 .profile__add-button {
   background-color: #212121;
   color: #fcf5e5;
@@ -76,11 +80,17 @@
   width: 149px;
   height: 52px;
   border-radius: 8px;
+  padding: 0;
 }
 
 .profile__add-button_icon {
   height: 12px;
   width: 12px;
+}
+
+.profile__add-button:hover {
+  background-color: rgba(21, 21, 21, 0.8);
+  border: 2px rgba(21, 21, 21, 0.8);
 }
 
 @media screen and (max-width: 627px) {
