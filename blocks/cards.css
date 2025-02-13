@@ -18,6 +18,8 @@
 @media screen and (max-width: 627px) {
   .cards__list {
     display: block;
-    width: 288px;
+    max-width: 288px;
+    width: 100%;
+    padding-bottom: 20px;
   }
 }

@@ -22,7 +22,7 @@ Will add photos to describe the project's features.
 
 **GitHub**
 
-[Link to deployed project on GitHub Pages](https://github.com/melissa-feeney/se_project_spots.git)
+[Link to deployed project on GitHub Pages](https://melissa-feeney.github.io/se_project_spots/)
 
 **More Information**
 
