@@ -43,6 +43,7 @@
 }
 
 .modal__close-button:hover {
+  background-image: url(../images/modal\ close\ hover.svg);
   cursor: pointer;
 }
 
