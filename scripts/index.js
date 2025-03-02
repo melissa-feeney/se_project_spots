@@ -51,6 +51,7 @@ function getCardElement(data) {
 
   cardNameEl.textContent = data.name;
   cardImageEl.src = data.link;
+  cardImageEl.alt = data.name;
 
   return cardElement;
 }
@@ -58,16 +59,16 @@ function getCardElement(data) {
 function openModal() {
   nameModalInput.value = profileName.textContent;
   descriptionModalInput.value = profileDescription.textContent;
-  editModal.classList.add("modal__opened");
+  editModal.classList.add("modal_opened");
 }
 
 function closeModal() {
-  editModal.classList.remove("modal__opened");
+  editModal.classList.remove("modal_opened");
 }
 
 function handleEditFormSubmit(evt) {
   evt.preventDefault();
-  profileName.content = nameModalInput.value;
+  profileName.textContent = nameModalInput.value;
   profileDescription.textContent = descriptionModalInput.value;
   closeModal();
 }
