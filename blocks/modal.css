@@ -9,13 +9,17 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  opacity: 0;
   visibility: hidden;
   font-family: "Poppins", Arial, sans-serif;
   padding: 0 16px;
+  transition: visibility 0.3s, opacity 0.3s ease-in;
 }
 
 .modal_opened {
   visibility: visible;
+  opacity: 1;
+  transition: visibility 0.3s, opacity 0.3s ease-in;
 }
 
 .modal__container {
@@ -27,24 +31,67 @@
   box-sizing: border-box;
   border-radius: 8px;
 }
+.modal__content {
+  top: 81px;
+  bottom: 80px;
+  width: 100%;
+  padding: 0;
+}
+.modal__content_type_preview {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modal__image {
+  border-radius: 8px;
+  max-height: 80vh;
+  max-width: 80vw;
+  object-fit: contain;
+  width: 100%;
+}
+
+.modal__image-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
 
 .modal__close-button {
   position: absolute;
-  top: 32px;
+  top: 30px;
   right: 50px;
   height: 40px;
   width: 40px;
   margin: 0;
   padding: 0;
-  background-image: url(../images/Close\ Icon.svg);
+  background-image: url("../images/Close_Icon.svg");
   border: none;
-  background-color: #fff;
-  background-size: cover;
+  background-position: center;
+  background-color: transparent;
+  opacity: 40%;
 }
 
 .modal__close-button:hover {
-  background-image: url(../images/modal\ close\ hover.svg);
+  background-image: url("../images/modal\ close\ hover.svg");
   cursor: pointer;
+  height: 40px;
+  width: 40px;
+  background-position: center;
+}
+
+.modal__close-button_type_preview {
+  background-image: url("../images/close-icon.svg");
+  top: -10px;
+  right: -40px;
+  position: absolute;
+  opacity: 1;
+}
+
+.modal__close-button_type_preview:hover {
+  opacity: 20%;
 }
 
 .modal__title {
@@ -94,6 +141,19 @@
   opacity: 30%;
 }
 
+.modal__caption {
+  margin: 8px 0 0;
+  font-family: "Poppins", Arial, sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  color: #fff;
+  background-color: #000;
+  border-radius: 8px;
+  position: relative;
+  text-align: center;
+  padding: 4px 8px;
+}
 @media screen and (max-width: 627px) {
   .modal {
     padding: 0 10px;
@@ -119,5 +179,10 @@
   }
   .modal__label {
     margin-bottom: 24px;
+  }
+
+  .modal__close-button_type_preview {
+    top: -40px;
+    right: -5px;
   }
 }
