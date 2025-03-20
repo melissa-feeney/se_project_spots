@@ -39,6 +39,7 @@
   padding: 0;
   border: none;
   background-color: #fcf5e5;
+  background-repeat: no-repeat;
   opacity: 0.4;
 }
 
@@ -50,6 +51,7 @@
 .card__like-button_liked {
   background-image: url(../images/button-liked.svg);
   opacity: 1;
+  background-repeat: no-repeat;
 }
 
 .card__like-button_liked:hover {

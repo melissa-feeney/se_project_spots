@@ -47,7 +47,7 @@
 .modal__image {
   border-radius: 8px;
   max-height: 80vh;
-  max-width: 80vw;
+  max-width: 90vw;
   object-fit: contain;
   width: 100%;
 }
@@ -183,6 +183,19 @@
 
   .modal__close-button_type_preview {
     top: -40px;
-    right: -5px;
+  }
+
+  .modal__image {
+    /*max-width: 90vw;*/
+    align-self: center;
+  }
+
+  .modal__image-container {
+    width: 90vw;
+  }
+
+  .modal__image {
+    width: 100%;
+    object-fit: cover;
   }
 }
