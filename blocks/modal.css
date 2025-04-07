@@ -127,6 +127,10 @@
   padding: 18px 58px;
 }
 
+.modal__submit-button_disabled {
+  opacity: 50%;
+}
+
 .modal__input {
   padding: 16px 12px;
   font-size: 20px;
@@ -139,6 +143,17 @@
 
 .modal__input::placeholder {
   opacity: 30%;
+}
+
+.modal__input_type_error {
+  border: 1px solid rgba(255, 0, 0, 0.6);
+}
+
+.modal__error {
+  color: rgba(255, 0, 0, 0.7);
+  font-family: "Poppins", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
 }
 
 .modal__caption {
@@ -186,7 +201,6 @@
   }
 
   .modal__image {
-    /*max-width: 90vw;*/
     align-self: center;
   }
 
