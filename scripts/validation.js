@@ -67,18 +67,6 @@ const setEventListeners = (formEl, config) => {
   });
 };
 
-cardModal.addEventListener("mousedown", (evt) => {
-  if (evt.target === cardModal) {
-    closeModal(cardModal);
-  }
-});
-
-editModal.addEventListener("mousedown", (evt) => {
-  if (evt.target === editModal) {
-    closeModal(editModal);
-  }
-});
-
 const enableValidation = (config) => {
   const formList = document.querySelectorAll(config.formSelector);
   formList.forEach((formEl) => {

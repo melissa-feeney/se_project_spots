@@ -156,6 +156,24 @@ previewModalCloseBtn.addEventListener("click", () => {
   closeModal(previewModal);
 });
 
+editModal.addEventListener("mousedown", (evt) => {
+  if (evt.target === editModal) {
+    closeModal(editModal);
+  }
+});
+
+cardModal.addEventListener("mousedown", (evt) => {
+  if (evt.target === cardModal) {
+    closeModal(cardModal);
+  }
+});
+
+previewModal.addEventListener("mousedown", (evt) => {
+  if (evt.target.classList.contains("modal__content_type_preview")) {
+    closeModal(previewModal);
+  }
+});
+
 editFormElement.addEventListener("submit", handleEditFormSubmit);
 cardForm.addEventListener("submit", handleAddCardSubmit);
 
