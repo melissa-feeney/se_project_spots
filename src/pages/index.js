@@ -17,7 +17,7 @@ api
   .then(([cards, userData]) => {
     cards.forEach((card) => {
       const cardElement = getCardElement(card);
-      cardsList.prepend(cardElement);
+      cardsList.append(cardElement);
     });
     const profileAvatar = document.querySelector(".profile__image");
     profileAvatar.src = userData.avatar;
@@ -219,38 +219,8 @@ profileEditButton.addEventListener("click", (config) => {
   openModal(editModal);
 });
 
-profileCloseButton.addEventListener("click", () => {
-  closeModal(editModal);
-});
-
 profileAddButton.addEventListener("click", () => {
   openModal(cardModal);
-});
-
-cardModalCloseBtn.addEventListener("click", () => {
-  closeModal(cardModal);
-});
-
-previewModalCloseBtn.addEventListener("click", () => {
-  closeModal(previewModal);
-});
-
-editModal.addEventListener("mousedown", (evt) => {
-  if (evt.target === editModal) {
-    closeModal(editModal);
-  }
-});
-
-cardModal.addEventListener("mousedown", (evt) => {
-  if (evt.target === cardModal) {
-    closeModal(cardModal);
-  }
-});
-
-previewModal.addEventListener("mousedown", (evt) => {
-  if (evt.target.classList.contains("modal__content_type_preview")) {
-    closeModal(previewModal);
-  }
 });
 
 deleteModalConfirmation.addEventListener("click", (evt) => {
@@ -271,37 +241,25 @@ deleteModalConfirmation.addEventListener("click", (evt) => {
     });
 });
 
-deleteModalCloseButton.addEventListener("click", () => {
-  closeModal(deleteModal);
-});
-
-deleteModal.addEventListener("mousedown", (evt) => {
-  if (evt.target === deleteModal) {
-    closeModal(deleteModal);
-  }
-});
-
-cancelButton.addEventListener("click", () => {
-  closeModal(deleteModal);
-});
-
 avatarModalButton.addEventListener("click", () => {
   openModal(avatarModal);
-});
-
-avatarModalCloseBtn.addEventListener("click", (evt) => {
-  closeModal(avatarModal);
-});
-
-avatarModal.addEventListener("mousedown", (evt) => {
-  if (evt.target === avatarModal) {
-    closeModal(avatarModal);
-  }
 });
 
 avatarForm.addEventListener("submit", handleAvatarSubmit);
 
 editFormElement.addEventListener("submit", handleEditFormSubmit);
 cardForm.addEventListener("submit", handleAddCardSubmit);
+
+const modals = document.querySelectorAll(".modal");
+modals.forEach((modal) => {
+  modal.addEventListener("mousedown", (evt) => {
+    if (
+      evt.target === modal ||
+      evt.target.classList.contains("modal__close-button")
+    ) {
+      closeModal(modal);
+    }
+  });
+});
 
 enableValidation(settings);
