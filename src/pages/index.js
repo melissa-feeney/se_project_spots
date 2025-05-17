@@ -90,6 +90,10 @@ function getCardElement(data) {
   cardImageEl.src = data.link;
   cardImageEl.alt = data.name;
 
+  cancelButton.addEventListener("click", () => {
+    closeModal(deleteModal);
+  });
+
   cardLikeButton.addEventListener("click", () => {
     const isLiked = cardLikeButton.classList.contains(
       "card__like-button_liked"
