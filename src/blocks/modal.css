@@ -27,7 +27,8 @@
   max-width: 730px;
   padding: 32px 50px;
   position: relative;
-  width: 100%;
+  width: calc(100% - 32px);
+  margin: 0 16px;
   box-sizing: border-box;
   border-radius: 8px;
 }
@@ -75,7 +76,7 @@
 }
 
 .modal__close-button:hover {
-  background-image: url("../images/modal\ close\ hover.svg");
+  background-image: url("../images/modal-close-hover.svg");
   cursor: pointer;
   height: 40px;
   width: 40px;
@@ -94,6 +95,14 @@
   opacity: 20%;
 }
 
+.modal__container-delete .modal__close-button {
+  position: absolute;
+  top: 0;
+  right: -40px;
+  background-image: url("../images/modal-close-button.svg");
+  opacity: 1;
+}
+
 .modal__title {
   margin: 0 0 32px;
   font-size: 32px;
@@ -101,6 +110,15 @@
   font-weight: 500;
 
   color: #212121;
+}
+
+.modal__title-delete {
+  font-size: 24px;
+}
+
+.modal__avatar-title {
+  margin-top: 4px;
+  padding-bottom: 4px;
 }
 
 .modal__label {
@@ -122,9 +140,9 @@
   font-size: 16px;
   line-height: 1;
   font-weight: 500;
-
   margin: 0;
   padding: 18px 58px;
+  white-space: nowrap;
 }
 
 .modal__submit-button_disabled {
@@ -169,12 +187,57 @@
   text-align: center;
   padding: 4px 8px;
 }
+
+.modal__button-container {
+  display: flex;
+  gap: 12px;
+  min-width: fit-content;
+  justify-content: center;
+}
+
+.modal__cancel-button {
+  background-color: transparent;
+  color: #212121;
+  border: 1px solid #212121;
+  height: 52px;
+  padding: 0;
+  cursor: pointer;
+}
+
+.modal__delete-button {
+  background-color: #ff6565;
+  border: #ff6565;
+  color: #212121;
+  height: 52px;
+  cursor: pointer;
+  padding: 0;
+}
+
+.modal__delete-content {
+  margin: 0 20px;
+}
+
+.modal__container-delete {
+  height: 172px;
+  width: calc(100% - 32px);
+  max-width: 630px;
+  margin: 0 16px;
+  padding: 32px 20px;
+}
+
 @media screen and (max-width: 627px) {
   .modal {
     padding: 0 10px;
   }
   .modal__container {
+    width: calc(100% - 20px);
+    margin: 0 10px;
     padding: 12px;
+  }
+
+  .modal__container-delete {
+    width: calc(100% - 20px);
+    margin: 0 10px;
   }
   .modal__input {
     font-size: 16px;
